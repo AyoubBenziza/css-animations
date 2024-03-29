@@ -1,0 +1,139 @@
+body{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+section{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 10em);
+    grid-auto-rows: 10em;
+    gap: 5em;
+    text-align: center;
+    list-style-type: none;
+}
+
+.box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 10px 10px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.scale{
+    animation: scale 1s infinite ease-in-out alternate;
+}
+
+.translate{
+    animation: translate 1s infinite ease-in-out alternate;
+}
+
+.rotate{
+    animation: rotate 1s infinite ease-in-out;
+}
+
+.perspective{
+    animation: perspective 2s infinite ease-in-out;
+}
+
+.rainbow{
+    animation: rainbow 4s infinite ease-in-out alternate;
+}
+
+.zoom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: zoom 4s infinite ease-in-out alternate;
+}
+
+@keyframes scale {
+    from {
+      transform: scale(1);
+    }
+  
+    to {
+      transform: scale(1.5);
+    }
+}
+
+@keyframes translate {
+    from {
+      transform: translateX(0%);
+    }
+  
+    to {
+      transform: translateX(30px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes perspective {
+    from {
+        perspective: none;
+    }
+
+    to {
+        perspective: 50rem;
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-color: aquamarine;
+    }
+
+    25%{
+        background-color: greenyellow;
+    }
+
+    50%{
+        background-color: yellow;
+    }
+
+    75% {
+        background-color: orange;
+    }
+
+    100%{
+        background-color: red;
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(3);
+    }
+}
